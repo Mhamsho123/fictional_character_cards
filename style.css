@@ -52,5 +52,9 @@ h3{
     height: 2em;
 }
 
+.header-selections li:hover{
+    background-color: #D3F5F5;
+    cursor: pointer;
 
+}
 
