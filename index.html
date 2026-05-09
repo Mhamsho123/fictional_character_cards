@@ -26,9 +26,40 @@
 
     <section class="hero-container">
       <form>
+        <div class="form-container">
+          <div class="form-inner">
+            <div class="form-name">
+              <input
+                id="first-name"
+                type="text"
+                placeholder="First Name"
+                name="firstname"
+                required
+              />
 
+              <input
+                id="last-name"
+                type="text"
+                placeholder="Last Name"
+                name="lastname"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <input id="birthday" type="date" name="DOB" required />
+            </div>
+
+            <div class="gender-row">
+              <label for="gender-selection-male">Male</label>
+              <input id="gender-selection-male" type="radio" name="gender" />
+
+              <label for="gender-selection-female">Female</label>
+              <input id="gender-selection-female" type="radio" name="gender" />
+            </div>
+          </div>
+        </div>
       </form>
-
     </section>
 
     <script src="index.js" type="module"></script>

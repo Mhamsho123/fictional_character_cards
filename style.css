@@ -10,10 +10,10 @@ body{
     align-items: center;
     justify-content: center;
     width: 100%;
-    background: url(https://i.redd.it/5m0rrmkjrz761.png);
+    background: url(img/header.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center 55%;
+    background-position: center 75%;
     color: white;
     font-family: "Pixelify Sans";
     font-weight: lighter;
@@ -53,7 +53,7 @@ h3{
     height: 2em;
     border: 3px solid var(--dark);
     box-shadow: 4px 4px 0 var(--dark);
-    text-shadow: 2px 2px 0 black›;
+    text-shadow: 2px 2px 0 black;
 }
 
 .header-selections li:hover {
@@ -65,9 +65,12 @@ h3{
 
 @media(min-width: 800px){
     .heading-container{
+        background: url(img/header-webversion.png);
         flex-direction: row;
         justify-content: space-between;
-        background-position: center 40%;
+        background-position: center center;
+        background-size: 70%;
+        min-height: 25%;
     }
     .title-container,.header-selections{
         margin: 0.9375em 7%;
@@ -81,10 +84,56 @@ h3{
 
 /* Sign Up Section*/
 
-.hero-container {
-    background-image: url("img/hero-img.png");
+form {
+    margin: 0;
+  }
+  
+  .hero-container {
+    background-image: 
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url("img/hero-img.png");
+  
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 500px;
-}
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-container {
+    background-image: url("img/signup-background.png");
+    background-size: 115% 120%;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+    width: 360px;
+    height: 420px;
+  
+    padding: 105px 40px 45px;
+    box-sizing: border-box;
+  }
+  
+
+  .form-name {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .form-name input {
+    width: 50%;
+  }
+  
+  .form-row {
+    margin-bottom: 10px;
+  }
+  
+  .gender-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: white;
+  }
