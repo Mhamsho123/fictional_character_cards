@@ -148,6 +148,12 @@ form {
     padding: 0.3215rem;
     font-family: "Pixelify Sans";
   }
+  .form-inner input:focus{
+    outline:none;
+    border-color: #8a71ec;
+    background-color: #e6e8ec;
+  }
+
   #birthday{
     min-width: 70%;
     margin-top: 1.2rem;
