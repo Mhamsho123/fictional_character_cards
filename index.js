@@ -1,3 +1,5 @@
+
+//SignUp sheet functionality
 const formEl = document.getElementById('signup-form')
 
 
@@ -11,6 +13,8 @@ if (formEl) {
 const camera = document.getElementById("camera")
 const confirmEl = document.getElementById('confirm-btn')
 
+
+//faceScan functionality
 if (camera) {
     startCamera()
 }
@@ -34,4 +38,19 @@ async function startCamera() {
 
 function confirmation(){
     window.location.href = 'character.html'
+}
+
+
+//character
+const welcomeEl = document.getElementById('welcome-character')
+
+if(welcomeEl){
+    rendercharacter()
+}
+
+
+
+function rendercharacter(){
+    html = ''
+    
 }
