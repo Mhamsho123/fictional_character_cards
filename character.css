@@ -1,0 +1,7 @@
+body{
+    margin: 0;
+    background: url(img/character-img/characterbackground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

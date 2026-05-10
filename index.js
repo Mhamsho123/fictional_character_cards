@@ -1,5 +1,6 @@
 const formEl = document.getElementById('signup-form')
 
+
 if (formEl) {
     formEl.addEventListener('submit', function(e) {
         e.preventDefault()
@@ -8,9 +9,13 @@ if (formEl) {
 }
 
 const camera = document.getElementById("camera")
+const confirmEl = document.getElementById('confirm-btn')
 
 if (camera) {
     startCamera()
+}
+if (confirmEl){
+    confirmEl.addEventListener('click', confirmation)
 }
 
 async function startCamera() {
@@ -25,4 +30,8 @@ async function startCamera() {
     } catch (error) {
         console.log("Camera access failed:", error)
     }
+}
+
+function confirmation(){
+    window.location.href = 'character.html'
 }
