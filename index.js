@@ -57,39 +57,69 @@ function confirmation(){
 
 
 //character
+// character
 const welcomeEl = document.getElementById('welcome-character')
 
+const characterStats = [
+    "Aura",
+    "Confidence",
+    "Drip",
+    "Physique",
+    "Glow",
+    "Discipline"
+]
 
-if(welcomeEl){
+if (welcomeEl) {
     rendercharacter()
 }
 
-
-
-function rendercharacter(){
+function rendercharacter() {
     const firstName = JSON.parse(localStorage.getItem('firstName'))
     const genderEl = JSON.parse(localStorage.getItem('gender'))
-    const age = JSON.parse(localStorage.getItem('dob'))
 
     let gender = ''
-    if(genderEl == 'female'){
+
+    if (genderEl === 'female') {
         gender = 'img/character-img/woman.png'
-    }else if(genderEl == 'male'){
+    } else if (genderEl === 'male') {
         gender = 'img/character-img/man.png'
     }
 
-    let html = ''
-    
+    let statsHtml = ""
 
-    html += `
-    <div>
-        <div class='character-container'>
-            <h1>Welcome ${firstName}</h1>
+    for (let stat of characterStats) {
+        statsHtml += getStatBar(stat)
+    }
+
+    const html = `
+        <div>
+            <div class="character-container">
+                <h1>Welcome ${firstName}</h1>
+            </div>
+
+            <div class="character-img-container">
+                <img class="character-img" src="${gender}" alt="${genderEl} character">
+                ${statsHtml}
+            </div>
         </div>
-        <img class="character-img" src="${gender}" alt="${genderEl} character">
-    </div>
-`
-    welcomeEl.innerHTML = html
-    console.log(html)
+    `
 
+    welcomeEl.innerHTML = html
+}
+
+function getStatBar(statName) {
+    let boxes = ""
+
+    for (let i = 0; i < 10; i++) {
+        boxes += `<div class="stat-box"></div>`
+    }
+
+    return `
+        <div class="character-stats-container">
+            <label>${statName}</label>
+            <div class="stats-bar">
+                ${boxes}
+            </div>
+        </div>
+    `
 }

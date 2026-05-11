@@ -5,6 +5,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 47% 10%;
+    background-attachment: fixed;
 }
 
 h1{
@@ -25,7 +26,53 @@ h1{
     min-width: 20rem;
     max-width: 40rem;
     height: 9rem;
+    margin-top: 4rem;
 
     box-shadow: 8px 8px black;
 }
 
+.character-img-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-img {
+    width: 80%;
+    height: auto;
+}
+
+
+.character-stats-container {
+    background-color: #5A2CA0;
+    border: 3px solid black;
+    box-shadow: 5px 5px black;
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 80%;
+    max-width: 400px;
+    color: white;
+    font-family: "Pixelify Sans";
+    text-align: center;
+}
+
+.character-stats-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px black;
+}
+
+.stats-bar {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.stat-box {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: 2px solid black;
+}
